@@ -70,7 +70,7 @@ class StandardTagLibrary extends TagLibrary {
      */
     public function getNamespace()
     {
-        return "http://www.caiyern.net/psp/taglibs/core";
+        return "http://www.example.com/psp/taglibs/core";
     }
 
     private static function requireAttributes(array $required, array &$attr, TagLibraryEvent $event){

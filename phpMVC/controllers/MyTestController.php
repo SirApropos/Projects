@@ -47,9 +47,8 @@ class MyTestController extends Controller
      */
     private $response;
 
-    public function doTest(){
-	    $ds = new MysqliDatasource("localhost","phpMVC","Pj42MPNADDb99auF","phpMVC");
-	    $result = $ds->queryForObject("TestAccountModel","SELECT * FROM `accounts` WHERE `username`=:username AND `id`=:id", array("username" => "Caiyern", "id" => 1));
+    public function doTest(MysqliDatasource $ds){
+	    $result = $ds->queryForObject("TestAccountModel","SELECT * FROM `accounts` WHERE `username`=:username AND `id`=:id", array("username" => "Apropos", "id" => 1));
 //	    $result = $ds->query("SELECT * FROM `accounts` WHERE `id`=1");
 	    print_r($result);
 	    $myArr = array("username" => "Test");
